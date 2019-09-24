@@ -7,6 +7,9 @@
  * }
  */
 class Solution {
+    //穿针引线法
+    //Time complexity: O(n^2)
+    //Space complexity: O(1)
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = new ListNode(0);
         ListNode ans = head;
