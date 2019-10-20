@@ -24,6 +24,7 @@
  ******************************************************************************/
 
 import java.util.Arrays;
+import lib.*;
 
 /**
  *  The {@code BinarySearch} class provides a static method for binary
@@ -99,7 +100,7 @@ public class BinarySearch {
         while (!StdIn.isEmpty()) {
             int key = StdIn.readInt();
             if (BinarySearch.indexOf(whitelist, key) == -1)
-                StdOut.println(key);
+                StdOut.println("this" + key + "is not in there.");
         }
     }
 }
