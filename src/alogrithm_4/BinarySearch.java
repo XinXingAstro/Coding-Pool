@@ -100,7 +100,7 @@ public class BinarySearch {
         while (!StdIn.isEmpty()) {
             int key = StdIn.readInt();
             if (BinarySearch.indexOf(whitelist, key) == -1)
-                StdOut.println("this" + key + "is not in there.");
+                StdOut.println(key + " is not in there.");
         }
     }
 }
