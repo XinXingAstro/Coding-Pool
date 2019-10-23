@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Solution {
     /**
      * 判断数独数组是否合规
@@ -42,6 +37,32 @@ public class Solution {
 
                         }
                     }
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 判断数独数组是否有效
+     * 使用HashSet+字符串编码简化代码，字符串编码规则："row(num)col"
+     * '4'在第7行编码为"(4)7"
+     * '4'在第7列编码为"7(4)"
+     * '4'在右上角3x3方格中编码为"0(4)2"
+     * 对于每一个数字都尝试将这三个字符串加入HashSet中,
+     * 如果set返回false说明出现重复,则返回false.
+     *
+     * @param board the board
+     * @return the boolean
+     */
+    public boolean isValidSudoku(char[][] board) {
+        Set seen = new HashSet();
+        for (int i=0; i<9; ++i) {
+            for (int j=0; j<9; ++j) {
+                if (board[i][j] != '.') {
+                    String b = "(" + board[i][j] + ")";
+                    if (!seen.add(b + i) || !seen.add(j + b) || !seen.add(i/3 + b + j/3))
+                        return false;
                 }
             }
         }
