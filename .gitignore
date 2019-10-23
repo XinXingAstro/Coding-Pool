@@ -1,4 +1,7 @@
 #ignore idea configs
 .idea/*
+
+*.class
+
 output/*
 test/*
