@@ -11,6 +11,7 @@ public class Solution {
      */
     public String countAndSay(int n) {
         String s = "1", cas = "";
+        //该数组可以改为HashMap
         int[] t = new int[100];
         for (int i = 0; i < (n - 1); i++) {
             int cur = s.charAt(0) - '0';
