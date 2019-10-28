@@ -22,7 +22,7 @@ public class Solution {
         else if (remain == 0) ans.add(new ArrayList<>(path));
         else {
             for (int i = start; i < a.length; i++) {
-                if(remain < a[i]) break;
+                if(remain < a[i]) break; //如果空位小于当前数则不再向后遍历
                 if (i > start && a[i] == a[i - 1]) continue;//跳过重复数字
                 path.add(a[i]);
                 backtrack(a, i + 1, remain - a[i], path, ans);
