@@ -19,7 +19,7 @@ public class Solution {
     /**
      * My pow double.
      * Time complexity: O(logn)
-     *  运行时间 ： 1ms
+     * 运行时间 ： 1ms
      *
      * @param x the x
      * @param n the n
