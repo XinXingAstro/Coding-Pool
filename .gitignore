@@ -3,4 +3,5 @@
 *.class
 output/*
 test/*
+.gradle
 /alogrithm_4/algs4/
