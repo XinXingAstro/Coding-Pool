@@ -1,7 +1,6 @@
 #ignore idea configs
 .idea/*
 *.class
-output/*
 test/*
-.gradle
-/alogrithm_4/algs4/
+*.iml
+/alogrithm_4/output/
