@@ -1,4 +1,11 @@
 public class Sqrt {
+    /**
+     * Sqrt double.
+     * 使用牛顿迭代法计算平方根
+     *
+     * @param c the c
+     * @return the double
+     */
     public static double sqrt(double c) {
         if (c < 0) return Double.NaN;
         double err = 1e-15; //err表示误差
