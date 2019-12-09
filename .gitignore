@@ -1,8 +1,14 @@
 #ignore idea configs
 .idea/*
-*.class
-test/*
 *.iml
+
+# java compile files
+*.class
+
+# test module files
+test/output/*
+
+
 /alogrithm_4/output/*
 
 # 解决文件无法忽略（一般是缓存造成的，所以要清缓存）
