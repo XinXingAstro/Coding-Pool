@@ -73,6 +73,8 @@ class Solution {
         for (int i = 0, j = 0; j < n; j++) {
             //如果前面包含s.charAt(j)直接把i跳到该字符最后出现位置的后一个位置
             if (map.containsKey(s.charAt(j))) {
+                //由于跟j位置字符重复的字符有可能出现在i的前面，为了防止重复判断，这里要用Math.max选择最新位置
+                //如“abba”当检查到最后一个a的时候i应该为2，但如果不用Math.max，则i会变为1.
                 i = Math.max(i, map.get(s.charAt(j)) + 1);
             }
             ans = Math.max(ans, j - i + 1);

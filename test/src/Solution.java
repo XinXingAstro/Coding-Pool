@@ -1,15 +1,18 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
-    public int numTrees(int n) {
-        int[] dp = new int[n + 1];
-        dp[0] = dp[1] = 1;
-        for (int i = 2; i <= n; i++) {
-            for (int j = 0; j < i; j++) {
-                dp[i] += dp[i - j - 1] * dp[j];
-            }
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int n = s.length(), ans = 0;
+        for (int i = 0, j = 0; j < n; j++) {
+            char key = s.charAt(j);
+            if (map.containsKey(key))
+                i = Math.max(i, map.get(key) + 1);
+            ans = Math.max(ans, j-i+1);
+            map.put(key, j);
         }
-        return dp[n];
+        return ans;
     }
 }
