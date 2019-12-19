@@ -4,7 +4,10 @@ public class Solution {
      * Test case: [], [1] = 1.0; [3], [-2,-1] = -1.0;
      * 在统计学中，中位数是用来将集合划分为两个长度相等的子集，
      * 其中一个子集中的所有元素全都大于另一个子集中的所有元素。
-     * 题解：https://www.cnblogs.com/grandyang/p/4465932.html
+     * 题解：
+     * https://www.cnblogs.com/grandyang/p/4465932.html
+     * https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2471/Very-concise-O(log(min(MN)))-iterative-solution-with-detailed-explanation
+     * https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn)))-solution-with-explanation
      * Time complexity: O(log(2*min(N1,N2)))1
      * Space complexity: O(1)
      *
@@ -17,15 +20,18 @@ public class Solution {
         if (N1 < N2) return findMedianSortedArrays(nums2, nums1); //确保第二个数组是短的那个
         int lo = 0, hi = N2 * 2; //在0~2N2范围内搜索，确保算法复杂度是O(log(2*min(N1, N2)))
         while (lo <= hi) {
-            int mid2 = (lo + hi) / 2; //尝试拆分nums2
+            int mid2 = (lo + hi) / 2; //尝试拆分nums2(较短数组)
             int mid1 = N1 + N2 - mid2; //计算出nums1的切分点
+            //mid是扩充数组(加#)中切割位置的坐标，L，R是对应的原数组中切割位置两边数的坐标
+            //下面是由切割位置计算出原数组中切割位置两边的数
             double L1 = (mid1 == 0) ? Double.MIN_VALUE : nums1[(mid1-1)/2];
             double L2 = (mid2 == 0) ? Double.MIN_VALUE : nums2[(mid2-1)/2];
             double R1 = (mid1 == N1*2) ? Double.MAX_VALUE : nums1[mid1/2];
             double R2 = (mid2 == N2*2) ? Double.MAX_VALUE : nums2[mid2/2];
-            if (L1 > R2) lo = mid2 + 1; //nums1的左半区太大了，
-            else if (L2 > R1) hi = mid2 - 1;
-            else return (Math.max(L1, L2) + Math.min(R1, R2)) / 2;
+            //切割是在较短数组中进行，所以lo, hi指针的调整也是在较短数组中进行
+            if (L1 > R2) lo = mid2 + 1; //L2需向后移动
+            else if (L2 > R1) hi = mid2 - 1; //L2需向前移动
+            else return (Math.max(L1, L2) + Math.min(R1, R2)) / 2.0;
         }
         return -1;
     }

@@ -24,6 +24,7 @@ leetcode 89：Gray Code：生成gray code的模板代码。现场编难度较大
 leetcode 92. Reverse Linked List II: 翻转链表的模板代码，如果现场编会非常困难
 leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
+leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
 
 
 ##########################################################################################
@@ -40,6 +41,12 @@ leetcode 69: sqrt(x): 牛顿迭代法和二分查找算法的应用
 leetcode 70: Climbing Stairs: 一题多解的经典题型
 leetcode 77: Combinations: 输出所有组合C(n, k)
 leetcode 89：Gray Code：生成gray code的模板代码。现场编难度较大，模板代码很简单。
+
+##########################################################################################
+                    String
+##########################################################################################
+leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
+
 
 ##########################################################################################
                     Array
