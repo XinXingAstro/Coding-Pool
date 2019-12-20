@@ -13,7 +13,7 @@ public class Main {
         a.next = b; b.next = c; c.next = d; d.next = e; e.next = f; f.next = g; g.next = h;
         h.next = i; i.next = j;*/
 //        new Solution().reverseBetween(a, 1, 10);
-        String s = "babad";
+        String s = "ccc";
         System.out.println(new Solution().longestPalindrome(s));
         /*String s = "226";
         System.out.println(new Solution().numDecodings(s));*/
