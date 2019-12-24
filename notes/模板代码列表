@@ -26,6 +26,10 @@ leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
 leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
 leetcode 102. Binary Tree Level Order Traversal： 层次遍历二叉树
+leetcode 104. Maximum Depth of Binary Tree: 二叉树基本功，两行代码，现场想可能想不到
+leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal: 二叉树基本功
+
+
 
 ##########################################################################################
                     Math
@@ -41,6 +45,7 @@ leetcode 69: sqrt(x): 牛顿迭代法和二分查找算法的应用
 leetcode 70: Climbing Stairs: 一题多解的经典题型
 leetcode 77: Combinations: 输出所有组合C(n, k)
 leetcode 89：Gray Code：生成gray code的模板代码。现场编难度较大，模板代码很简单。
+leetcode 104. Maximum Depth of Binary Tree: 代码特别简洁，现场想可能想不到
 
 ##########################################################################################
                     String
@@ -62,6 +67,8 @@ leetcode 26/80: Remove Duplicates: 删除数组中的重复数字，自己写会
 leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
 leetcode 102. Binary Tree Level Order Traversal： 层次遍历二叉树
+leetcode 104. Maximum Depth of Binary Tree: 二叉树基本功，两行代码，现场想可能想不到
+leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal: 二叉树基本功
 
 
 ##########################################################################################

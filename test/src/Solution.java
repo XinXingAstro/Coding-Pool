@@ -1,30 +1,26 @@
-import java.util.*;
-
 public class Solution {
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> ans = new ArrayList<>();
-        if (root == null) return ans;
-        Deque<TreeNode> q = new LinkedList<>();
-        q.offer(root);
-        boolean dir = false;
-        while (!q.isEmpty()) {
-            int len = q.size();
-            dir ^= true;
-            List<Integer> row = new ArrayList<>();
-            for (int i = 0; i < len; i++) {
-                TreeNode r = dir ? q.pollFirst() : q.pollLast();
-                row.add(r.val);
-                if (dir) {
-                    if (r.left != null) q.offer(r.left);
-                    if (r.right != null) q.offer(r.right);
-                } else  {
-                    if (r.right != null) q.offer(r.right);
-                    if (r.left != null) q.offer(r.left);
 
-                }
-            }
-            ans.add(row);
-        }
-        return ans;
+
+    /**
+     * Build tree tree node.
+     * 不容易理解的算法，但是速度快
+     *
+     * @param preorder the preorder
+     * @param inorder  the inorder
+     * @return the tree node
+     */
+    private int preIndex = 0;
+    private int inIndex = 0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return buildHelper(preorder, inorder, Integer.MAX_VALUE);
+    }
+    private TreeNode buildHelper(int[] preorder, int[] inorder, int rootVal) {
+        if (inIndex == inorder.length || inorder[inIndex] == rootVal) return null;
+        TreeNode root = new TreeNode(preorder[preIndex]);
+        preIndex++;
+        root.left = buildHelper(preorder, inorder, root.val);
+        inIndex++;
+        root.right = buildHelper(preorder, inorder, rootVal);
+        return root;
     }
 }
