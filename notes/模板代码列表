@@ -26,8 +26,15 @@ leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
 leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
 leetcode 102. Binary Tree Level Order Traversal： 层次遍历二叉树
-leetcode 104. Maximum Depth of Binary Tree: 二叉树基本功，两行代码，现场想可能想不到
-leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal: 二叉树基本功
+leetcode 104. Maximum Depth of Binary Tree: 寻找二叉树的最大深度，二叉树基本功，两行代码，现场想可能想不到
+leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal：根据前序遍历序列和中序遍历序列新建二叉树
+leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal：根据后序遍历序列和中序遍历序列新建二叉树
+leetcode 108. Convert Sorted Array to Binary Search Tree：将有序数组转化为平衡二叉搜索树
+leetcode 109. Convert Sorted List to Binary Search Tree: 从排序链表建立二叉搜索树
+leetcode 110. Balanced Binary Tree: 判断树是否是平衡树
+leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
+leetcode 112. Path Sum
+
 
 
 
@@ -49,10 +56,17 @@ leetcode 104. Maximum Depth of Binary Tree: 代码特别简洁，现场想可能
 leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal
 leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal
 
+
+
+
 ##########################################################################################
                     String
 ##########################################################################################
 leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
+
+
+
+
 
 
 ##########################################################################################
@@ -62,6 +76,9 @@ leetcode 54/59: Spiral Matrix: 顺时针旋转输出矩阵，记住模板后很�
 leetcode 76: Subsets: 跟77题一样标准回溯算法解法
 leetcode 26/80: Remove Duplicates: 删除数组中的重复数字，自己写会很复杂，模板代码很简单。
 
+
+
+
 ##########################################################################################
                     Tree
 ##########################################################################################
@@ -70,14 +87,23 @@ leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
 leetcode 102. Binary Tree Level Order Traversal： 层次遍历二叉树
 leetcode 104. Maximum Depth of Binary Tree: 二叉树基本功，两行代码，现场想可能想不到
-leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal: 二叉树基本功
-leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal： 二叉树基本功
+leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal：根据前序遍历序列和中序遍历序列新建二叉树
+leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal：根据后序遍历序列和中序遍历序列新建二叉树
+leetcode 108. Convert Sorted Array to Binary Search Tree：将有序数组转化为平衡二叉搜索树
+leetcode 109. Convert Sorted List to Binary Search Tree: 从排序链表建立二叉搜索树
+leetcode 110. Balanced Binary Tree: 判断树是否是平衡树
+leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
+leetcode 112. Path Sum
+
+
 
 
 ##########################################################################################
                     LinkedNode
 ##########################################################################################
 leetcode 92. Reverse Linked List II: 翻转链表的模板代码，如果现场编会非常困难
+
+
 
 
 ##########################################################################################
@@ -87,10 +113,16 @@ leetcode 48. Rotate Image: 图像旋转算法
 leetcode 79: Word Search: 图的深度优先遍历经典题目
 
 
+
+
+
 ##########################################################################################
                     Dynamic Programing
 ##########################################################################################
 leetcode 62/63: Unique Paths I/II: 动态规划算法的典型题目，帮助建立动态规划思维，学习优化空间复杂度的方法。
+
+
+
 
 ##########################################################################################
                     Backtrack
@@ -100,7 +132,15 @@ leetcode 76: Subsets: 跟77题一样标准回溯算法解法
 Combination Sum, Combination Sum II (can't reuse same element), Palindrome Partitioning
 
 
+
+
+
+
 ##########################################################################################
                     Search
 ##########################################################################################
 leetcode 33/81: Search in Rotated Sorted Array I/II：二分查找的应用，II难度较大需要背诵
+
+
+
+
