@@ -33,7 +33,10 @@ leetcode 108. Convert Sorted Array to Binary Search Tree：将有序数组转化
 leetcode 109. Convert Sorted List to Binary Search Tree: 从排序链表建立二叉搜索树
 leetcode 110. Balanced Binary Tree: 判断树是否是平衡树
 leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
-leetcode 112. Path Sum
+leetcode 112. Path Sum：树中是否有路径节点值和为sum的路径
+leetcode 113. Path Sum II：将所有和为sum的路径都找出来
+leetcode 114. Flatten Binary Tree to Linked List: 将二叉树按照先根遍历的顺序展平，代码很简单需要背诵
+## 从 94-114 都是二叉树相关的 ##
 
 
 
@@ -93,8 +96,10 @@ leetcode 108. Convert Sorted Array to Binary Search Tree：将有序数组转化
 leetcode 109. Convert Sorted List to Binary Search Tree: 从排序链表建立二叉搜索树
 leetcode 110. Balanced Binary Tree: 判断树是否是平衡树
 leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
-leetcode 112. Path Sum
-
+leetcode 112. Path Sum：树中是否有路径节点值和为sum的路径
+leetcode 113. Path Sum II：将所有和为sum的路径都找出来
+leetcode 114. Flatten Binary Tree to Linked List: 将二叉树按照先根遍历的顺序展平，代码很简单需要背诵
+## 从 94-114 都是二叉树相关的 ##
 
 
 

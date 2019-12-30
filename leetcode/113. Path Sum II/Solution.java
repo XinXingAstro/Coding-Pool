@@ -20,12 +20,12 @@ public class Solution {
         path.add(root.val);
         if (root.left == null && root.right == null && sum - root.val == 0) {
             ans.add(new ArrayList<>(path));
-            path.remove(path.size() - 1);
+            path.remove(path.size() - 1); //在返回前删除路径中最后一个节点
             return;
         } else {
             helper(root.left, sum-root.val, ans, path);
             helper(root.right, sum-root.val, ans, path);
         }
-        path.remove(path.size() - 1);
+        path.remove(path.size() - 1); //在返回前删除路径中最后一个节点
     }
 }
