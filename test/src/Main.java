@@ -20,7 +20,7 @@ public class Main {
         TreeNode f = new TreeNode(4);
         TreeNode g = new TreeNode(3);
         a.left = b; a.right = c; b.left = d; b.right = e; c.left = f; c.right = g;
-        System.out.println(new Solution().isSymmetric(a));
+        System.out.println(new Solution().getRow(3));
         /*String s = "226";
         System.out.println(new Solution().numDecodings(s));*/
     }
