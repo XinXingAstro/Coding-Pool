@@ -22,9 +22,10 @@ leetcode 26/80: Remove Duplicates: 删除数组中的重复数字，自己写会
 leetcode 33/81: Search in Rotated Sorted Array I/II：二分查找的应用，II难度较大需要背诵
 leetcode 89：Gray Code：生成gray code的模板代码。现场编难度较大，模板代码很简单。
 leetcode 92. Reverse Linked List II: 翻转链表的模板代码，如果现场编会非常困难
+leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
+## 从 94-114 都是二叉树相关的 ##
 leetcode 94. Binary Tree Inorder Traversal：中序遍历二叉树
 leetcode 95. Unique Binary Search Trees II: 生成所有1到n的搜索二叉树
-leetcode 5. Longest Palindromic Substring: Manacher's Algorithm
 leetcode 102. Binary Tree Level Order Traversal： 层次遍历二叉树
 leetcode 104. Maximum Depth of Binary Tree: 寻找二叉树的最大深度，二叉树基本功，两行代码，现场想可能想不到
 leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal：根据前序遍历序列和中序遍历序列新建二叉树
@@ -36,7 +37,9 @@ leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
 leetcode 112. Path Sum：树中是否有路径节点值和为sum的路径
 leetcode 113. Path Sum II：将所有和为sum的路径都找出来
 leetcode 114. Flatten Binary Tree to Linked List: 将二叉树按照先根遍历的顺序展平，代码很简单需要背诵
-## 从 94-114 都是二叉树相关的 ##
+## 股票系列经典问题 ##
+leetcode 121. Best Time to Buy and Sell Stock
+leetcode 122. Best Time to Buy and Sell Stock II
 
 
 
@@ -58,7 +61,9 @@ leetcode 89：Gray Code：生成gray code的模板代码。现场编难度较大
 leetcode 104. Maximum Depth of Binary Tree: 代码特别简洁，现场想可能想不到
 leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal
 leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal
-
+## 股票系列经典问题 ##
+leetcode 121. Best Time to Buy and Sell Stock
+leetcode 122. Best Time to Buy and Sell Stock II
 
 
 
