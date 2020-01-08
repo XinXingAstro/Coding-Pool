@@ -20,8 +20,9 @@ public class Main {
         TreeNode f = new TreeNode(4);
         TreeNode g = new TreeNode(3);
         a.left = b; a.right = c; b.left = d; b.right = e; c.left = f; c.right = g;*/
-        System.out.println(new Solution().isPalindrome("A man, a plan, a canal: Panama"));
+//        System.out.println(new Solution().isPalindrome("A man, a plan, a canal: Panama"));
         /*String s = "226";
         System.out.println(new Solution().numDecodings(s));*/
+        System.out.println(new Test().test("123"));
     }
 }

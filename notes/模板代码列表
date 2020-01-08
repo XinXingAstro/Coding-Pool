@@ -37,6 +37,8 @@ leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
 leetcode 112. Path Sum：树中是否有路径节点值和为sum的路径
 leetcode 113. Path Sum II：将所有和为sum的路径都找出来
 leetcode 114. Flatten Binary Tree to Linked List: 将二叉树按照先根遍历的顺序展平，代码很简单需要背诵
+leetcode 144. Binary Tree Preorder Traversal: 二叉树的先序遍历
+leetcode 145. Binary Tree Postorder Traversal: 二叉树的后序遍历
 ## 股票系列经典问题 ##
 leetcode 121. Best Time to Buy and Sell Stock
 leetcode 122. Best Time to Buy and Sell Stock II
@@ -104,6 +106,8 @@ leetcode 111. Minimum Depth of Binary Tree：找到树的最小深度
 leetcode 112. Path Sum：树中是否有路径节点值和为sum的路径
 leetcode 113. Path Sum II：将所有和为sum的路径都找出来
 leetcode 114. Flatten Binary Tree to Linked List: 将二叉树按照先根遍历的顺序展平，代码很简单需要背诵
+leetcode 144. Binary Tree Preorder Traversal: 二叉树的先序遍历
+leetcode 145. Binary Tree Postorder Traversal: 二叉树的后序遍历
 ## 从 94-114 都是二叉树相关的 ##
 
 

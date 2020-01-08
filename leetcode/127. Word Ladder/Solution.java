@@ -52,4 +52,42 @@ public class Solution {
         }
         return 0;
     }
+
+
+
+
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> begin = new HashSet<>();
+        Set<String> end = new HashSet<>();
+        Set<String> dict = new HashSet<>(wordList);
+        if (!dict.contains(endWord)) return 0;
+        begin.add(beginWord);
+        end.add(endWord);
+        return helper(begin, end, dict, 1);
+    }
+    private int helper(Set<String> begin, Set<String> end, Set<String> dict, int level) {
+        if (begin.isEmpty() || end.isEmpty()) return 0;
+        dict.removeAll(begin);
+        Set<String> next = new HashSet<>();
+        for (String s : begin) {
+            char[] word = s.toCharArray();
+            for (int i = 0; i < word.length; i++) {
+                char old = word[i];
+                for (char c = 'a'; c <= 'z'; c++) {
+                    word[i] = c;
+                    String newWord = new String(word);
+                    if (!dict.contains(newWord))
+                        continue;
+                    if (end.contains(newWord))
+                        return level + 1;
+                    next.add(newWord);
+                }
+                word[i] = old;
+            }
+        }
+        if (next.size() < end.size())
+            return helper(next, end, dict, level + 1);
+        else
+            return helper(end, next, dict, level + 1);
+    }
 }
