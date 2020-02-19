@@ -1,5 +1,5 @@
-import javafx.util.Pair;
 import java.util.*;
+import javafx.util.Pair;
 
 public class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
