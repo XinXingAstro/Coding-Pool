@@ -1,4 +1,5 @@
 import java.util.*;
+import javafx.util.Pair;
 
 public class Solution {
     public int minCut(String s) {
