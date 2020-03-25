@@ -1,23 +1,35 @@
 import java.util.*;
-import javafx.util.Pair;
-
+import java.io.*;
 public class Solution {
-    public int minCut(String s) {
-        int n = s.length();
-        int[] dp = new int[n];
-        for (int i = 0; i < n; i++)
-            dp[i] = i;
-        for (int i = 0; i < n; i++) {
-            helper(s, i, i, dp);
-            helper(s, i, i+1, dp);
+    public static int minDis(int N) {
+        int dis = 0;
+        for (int i = 0; i <= N; i++) {
+            int plus = N + i;
+            int minu = N - i;
+            if (isAllEven(plus) || isAllEven(minu)) {
+                dis = i;
+                break;
+            }
         }
-        return dp[n-1];
+        return dis;
     }
-    private void helper(String s, int l, int r, int[] dp) {
-        while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
-            if (l == 0) dp[r] = 0;
-            else dp[r] = Math.min(dp[r], dp[l-1]+1);
-            l--; r++;
+
+    public static boolean isAllEven(int n) {
+        if (n < 0) n = -n;
+        while (n > 0) {
+            int digit = n % 10;
+            if ((digit & 1) == 1) return false;
+            n /= 10;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        int T = in.nextInt();
+        for (int i = 1; i <= T; i++) {
+            int N = in.nextInt();
+            System.out.println("Case #" + i + ": " + minDis(N));
         }
     }
 }

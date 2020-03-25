@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Solution().minCut("aab"));
+        System.out.println(new Solution());
 /*        ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);
