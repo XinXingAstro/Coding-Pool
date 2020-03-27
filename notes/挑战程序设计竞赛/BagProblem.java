@@ -24,12 +24,6 @@ public class BagProblem {
         Scanner s = new Scanner(System.in);
         n = s.nextInt();
         W = s.nextInt();
-        dp = new int[n+1][W+1];
-        for (int i = 0; i < n+1; i++) {
-            for (int j = 0; j < W+1; j++) {
-                dp[i][j] = -1;
-            }
-        }
         w = new int[n];
         v = new int[n];
         for (int i = 0; i < n; i++) {
@@ -37,10 +31,23 @@ public class BagProblem {
             v[i] = s.nextInt();
         }
         System.out.println(new BagProblem().rec(0, W));
+        System.out.println(new BagProblem().recIteration());
+        System.out.println(new BagProblem().recIteration1());
     }
 
-    // 从第i个商品开始挑选总重小于j的部分
+    /*
+     * 背包问题的递归解决方法O(nW)
+     * 记dp[i][j]表示：从第i个物品开始挑选总重小于j时，总价值的最大值
+    **/
     public int rec(int i, int j) {
+        // 初始化dp数组
+        dp = new int[n+1][W+1];
+        for (int r = 0; r < n+1; r++) {
+            for (int c = 0; c < W+1; c++) {
+                dp[r][c] = -1;
+            }
+        }
+
         if (dp[i][j] >= 0) {
             // 如果已经计算过就直接使用之前的结果
             return dp[i][j];
@@ -59,4 +66,48 @@ public class BagProblem {
         // 将结果记录在数组中
         return dp[i][j] = profit;
     }
+
+    /*
+    * 背包问题的迭代解决方法O(nW)
+    * 记dp[i][j]表示：从第i个商品开始挑选总重小于j时，总价值的最大值
+    * 初值：dp[n][j] = 0 没有商品了
+    * dp[i][j] = dp[i+1][j]  (j < w[i] 剩余重量小于w[i])
+    * dp[i][j] = max(dp[i+1][j], dp[i+1][j-w[i]]+v[i]) (选或不选i的最大值)
+    * */
+    public int recIteration() {
+        dp = new int[n+1][W+1];
+
+        for (int i = n-1; i >= 0; i--) {
+            for (int j = 0; j <= W; j++) {
+                if (j < w[i]) {
+                    dp[i][j] = dp[i+1][j];
+                } else {
+                    dp[i][j] = Math.max(dp[i+1][j], dp[i+1][j-w[i]]+v[i]);
+                }
+            }
+        }
+        return dp[0][W];
+    }
+
+    /*
+    * 背包问题迭代解决方法O(nW)
+    * 记dp[i][j]表示；从前i个商品中选出总重量不超过j的物品时总价值的最大值
+    * 初值：dp[0][j] = 0 没有物品可选
+    * dp[i+1][j] = dp[i][j]  (j < w[i]第i个物品的重量超过j无法选择)
+    * dp[i+1][j] = max(dp[i][j], dp[i][j-w[i]]+v[i]) (选择第i个物品或者不选第i个物品获得价值的最大值)
+    * */
+    public int recIteration1() {
+        dp = new int[n+1][W+1];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= W; j++) {
+                if (j < w[i]) {
+                    dp[i+1][j] = dp[i][j];
+                } else {
+                    dp[i+1][j] = Math.max(dp[i][j], dp[i][j-w[i]] + v[i]);
+                }
+            }
+        }
+        return dp[n][W];
+    }
+
 }
