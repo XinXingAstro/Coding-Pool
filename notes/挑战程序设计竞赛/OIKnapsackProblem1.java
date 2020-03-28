@@ -1,5 +1,5 @@
 /*
-* 背包问题：
+* 0-1背包问题：
 * 有n个重量个价值分别是Wi和Vi的物品，从这些物品中挑选出总重量不超过W的物品，
 * 求所有挑选的方案中价值总和的最大值。
 *
@@ -10,7 +10,7 @@
 *
 * */
 import java.util.*;
-public class BagProblem {
+public class OIKnapsackProblem1 {
     // 记忆化数组
     public static int[][] dp;
 
@@ -30,9 +30,10 @@ public class BagProblem {
             w[i] = s.nextInt();
             v[i] = s.nextInt();
         }
-        System.out.println(new BagProblem().rec(0, W));
-        System.out.println(new BagProblem().recIteration());
-        System.out.println(new BagProblem().recIteration1());
+        System.out.println(new OIKnapsackProblem1().rec(0, W));
+        System.out.println(new OIKnapsackProblem1().recIteration());
+        System.out.println(new OIKnapsackProblem1().recIteration1());
+        System.out.println(new OIKnapsackProblem1().recIteration2());
     }
 
     /*
@@ -110,4 +111,18 @@ public class BagProblem {
         return dp[n][W];
     }
 
+    /*
+    * 优化空间复杂度
+    * 将dp二维数组降为一维
+    * 注意：内部循环的遍历方向必须是从W到w[i]
+    * */
+    public int recIteration2() {
+        int[] dp = new int[W + 1];
+        for (int i = 0; i < n; i++) {
+            for (int j = W; j >= w[i]; j--) {
+                dp[j] = Math.max(dp[j], dp[j - w[i]] + v[i]);
+            }
+        }
+        return dp[W];
+    }
 }
