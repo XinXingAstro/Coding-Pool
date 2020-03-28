@@ -26,5 +26,6 @@ public class Main {
         /*String s = "226";
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
+
     }
 }
