@@ -10,7 +10,7 @@
 *
 * */
 import java.util.*;
-public class OIKnapsackProblem1 {
+public class BoundedKnapsackProblem1 {
     // 记忆化数组
     public static int[][] dp;
 
@@ -30,10 +30,10 @@ public class OIKnapsackProblem1 {
             w[i] = s.nextInt();
             v[i] = s.nextInt();
         }
-        System.out.println(new OIKnapsackProblem1().rec(0, W));
-        System.out.println(new OIKnapsackProblem1().recIteration());
-        System.out.println(new OIKnapsackProblem1().recIteration1());
-        System.out.println(new OIKnapsackProblem1().recIteration2());
+        System.out.println(new BoundedKnapsackProblem1().rec(0, W));
+        System.out.println(new BoundedKnapsackProblem1().recIteration());
+        System.out.println(new BoundedKnapsackProblem1().recIteration1());
+        System.out.println(new BoundedKnapsackProblem1().recIteration2());
     }
 
     /*
