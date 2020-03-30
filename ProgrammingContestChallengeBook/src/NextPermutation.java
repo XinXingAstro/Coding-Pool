@@ -1,3 +1,4 @@
+/*
 
 public class NextPermutation {
     boolean[] used = new boolean[MAX_N];
@@ -6,9 +7,11 @@ public class NextPermutation {
     // 生成 {0，1，2，3，4，。。。，n-1} 的 n！种排列
     public void permutation1(int pos, int n) {
         if (pos == n) {
-            /*
+            */
+/*
             * 这里编写需要对perm进行的操作
-            * */
+            * *//*
+
             return ;
         }
 
@@ -35,11 +38,13 @@ public class NextPermutation {
             perm2[i] = i;
         }
         do {
-            /*
+            */
+/*
             *  这里写需要对perm2及逆行的操作
-            * */
+            * *//*
+
         } while (next_permutation(perm2, perm2 + n));
         // 所有的排列都生成后，next_permutation会返回false
         return ;
     }
-}
+}*/

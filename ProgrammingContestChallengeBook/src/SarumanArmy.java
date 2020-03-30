@@ -1,11 +1,14 @@
+/*
 import java.util.Arrays;
 
+*/
 /*
 * Saruman's Army问题
 * 直线上有N个点，从这些点中选若干个点加标记，对于每一个点，
 * 其距离为R以内的区域里必须有标记点。在满足这个条件下尽可能
 * 少的标记点。
-* */
+* *//*
+
 public class SarumanArmy {
     public int N, R;
     int X[MAX_N];
@@ -32,3 +35,4 @@ public class SarumanArmy {
         return ans;
     }
 }
+*/

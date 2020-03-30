@@ -1,6 +1,7 @@
 /*
 * 有一个大小为NxM的院子，雨后计算院子中有多少水洼
-* */
+* *//*
+
 public class LakeCounting {
     // 输入
     int N, M;
@@ -35,4 +36,4 @@ public class LakeCounting {
         }
         return res;
     }
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 import javafx.util.Pair;
 
 import java.util.Arrays;
@@ -11,7 +12,7 @@ public class IntervalProblem {
     public static int[] T = new int[MAX_N]; // 表示工作结束时间
 
     //用于对工作排序的pair数组
-    public static Pair<Integer, Integer>[] itv = new Pair<>[MAX_N];
+    public static Pair<Integer, Integer>[] itv = new Pair[MAX_N];
 
     public int solve() {
         // 对pair进行的是字典序比较
@@ -32,3 +33,4 @@ public class IntervalProblem {
         return ans;
     }
 }
+*/

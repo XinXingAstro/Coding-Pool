@@ -1,3 +1,4 @@
+/*
 public class KSum {
     // 输入
     int[] a = new int[MAX_N];
@@ -22,4 +23,4 @@ public class KSum {
         if (dfs(0, 0)) return ture;
         else return false;
     }
-}
+}*/
