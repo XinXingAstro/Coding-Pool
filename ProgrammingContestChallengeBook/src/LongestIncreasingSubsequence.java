@@ -19,6 +19,7 @@ public class LongestIncreasingSubsequence {
             a[i] = s.nextInt();
         }
         System.out.println(new LongestIncreasingSubsequence().solve());
+        System.out.println(new LongestIncreasingSubsequence().solve1());
     }
 
     /*
@@ -42,5 +43,37 @@ public class LongestIncreasingSubsequence {
             res = Math.max(res, dp[i]);
         }
         return res;
+    }
+
+    /*
+    * 优化动态规划算法
+    * 使用lower_bound函数
+    * dp[i]:=长度为i+1的上升子序列中末尾元素的最小值（不存在的话就是INF）
+    * 初值：dp[i] = INF
+    * dp中大于等于a[i]的最小位置放a[i]，迭代遍历a[i]，dp数组中不为INF的数的长度既为解
+    * lower_bound函数使用二分搜索，所以算法整体时间复杂度为：O(nlogn)
+    * */
+    public int solve1() {
+        int[] dp = new int[n+1];
+        for (int i = 0; i < n+1; i++) {
+            dp[i] = 1000010;
+        }
+        for (int i = 0; i < n; i++) {
+            dp[lower_bound(0, n, dp, a[i])] = a[i];
+        }
+        int res = 0;
+        for (int i = 0; i < n+1; i++) {
+            if (dp[i] < 1000010) res++;
+        }
+        return res;
+    }
+    public int lower_bound(int l, int r, int[] a, int k) {
+        while (l <= r) {
+            int i = (r + l) / 2;
+            if (k > a[i]) l = i + 1;
+            else if (k < a[i]) r = i - 1;
+            else return i;
+        }
+        return l;
     }
 }
