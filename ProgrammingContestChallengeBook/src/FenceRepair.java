@@ -1,17 +1,25 @@
 // Fence Repair 问题，让切板的开销最少
 import java.util.*;
 public class FenceRepair {
+    public static int N;
+    public static int[] L;
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int N = s.nextInt();
-        int[] L = new int[N];
+        N = s.nextInt();
+        L = new int[N];
         for (int i = 0; i < N; i++) {
             L[i] = s.nextInt();
         }
-        System.out.println(new FenceRepair().minSpending(L));
+        System.out.println(new FenceRepair().solve());
+        System.out.println(new FenceRepair().solve1());
     }
 
-    public long minSpending(int[] L) {
+    /*
+    * 贪心算法
+    * 时间复杂度O(N^2)
+    * */
+    public long solve() {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < L.length; i++) list.add(L[i]);
         long ans = 0;
@@ -38,5 +46,21 @@ public class FenceRepair {
         int temp = a;
         a = b;
         b = temp;
+    }
+
+    /*
+    * 使用优先队列实现的方法
+    * */
+    public int solve1() {
+        Queue<Integer> pQueue = new PriorityQueue<>();
+        for (int i = 0; i < L.length; i++) pQueue.offer(L[i]);
+        int res = 0;
+        while (pQueue.size() > 1) {
+            int min1 = pQueue.poll();
+            int min2 = pQueue.poll();
+            res += (min1 + min2);
+            pQueue.offer(min1 + min2);
+        }
+        return res;
     }
 }

@@ -1,6 +1,22 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class Test {
     public static void main(String[] args) {
-        int[] a = {10,11,14,16,16};
-        System.out.println(new LongestIncreasingSubsequence().lower_bound(0, 4, a, 12));
+        Queue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2-o1;
+            }
+        });
+        pq.offer(1);
+        pq.offer(2);
+        pq.offer(3);
+        pq.offer(4);
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
     }
 }
