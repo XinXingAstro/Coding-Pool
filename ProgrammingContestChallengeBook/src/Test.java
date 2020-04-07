@@ -1,6 +1,4 @@
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -18,5 +16,6 @@ public class Test {
         System.out.println(pq.poll());
         System.out.println(pq.poll());
         System.out.println(pq.poll());
+
     }
 }
