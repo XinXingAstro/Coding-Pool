@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Solution());
+        String S = "y#fo##f";
+        String T = "y#f#o##f";
+        System.out.println(new Solution().backspaceCompare(S, T));
 /*        ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);
