@@ -1,15 +1,22 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
-import java.util.*;
-import java.io.*;
-public class Solution {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
-        int t = in.nextInt();  // Scanner has functions to read ints, longs, strings, chars, etc.
-        for (int i = 1; i <= t; ++i) {
-            int n = in.nextInt();
-            int m = in.nextInt();
-            System.out.println("Case #" + i + ": " + (n + m) + " " + (n * m));
+class Solution {
+    public int lastStoneWeight(int[] stones) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        for (int i = 0; i < stones.length; i++) {
+            pq.offer(stones[i]);
         }
+        while(pq.size() > 1) {
+            int a = pq.poll();
+            int b = pq.poll();
+            pq.offer(Math.abs(a - b));
+        }
+        return pq.isEmpty() ? 0 : pq.poll();
     }
 }
-       
