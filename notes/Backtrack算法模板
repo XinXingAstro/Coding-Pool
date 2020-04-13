@@ -1,5 +1,5 @@
 ```java
-public class Solution {
+public class A.Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         backtrack(nums, new ArrayList<>(), ans);

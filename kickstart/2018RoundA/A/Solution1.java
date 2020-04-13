@@ -1,7 +1,7 @@
 // 只能解决Small Test case
 import java.util.*;
 import java.io.*;
-public class Solution {
+public class A.Solution {
     public static int minDis(int N) {
         int dis = 0;
         for (int i = 0; i <= N; i++) {
