@@ -8,22 +8,41 @@
  * }
  */
 class Solution {
-    public TreeNode first;
-    public TreeNode second;
-    public TreeNode pre = new TreeNode(Integer.MIN_VALUE);
-    public void recoverTree(TreeNode root) {
-        inorder(root);
-        int temp = first.val;
-        first.val = second.val;
-        second.val = temp;
-        return;
-    }
-    public void inorder(TreeNode root) {
-        if (root == null) return;
-        inorder(root.left);
-        if (first == null && pre.val > root.val) first = pre;
-        if (first != null && pre.val > root.val) second = root;
-        pre = root;
-        inorder(root.right);
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if (root == null) return root;
+        // find Key node
+        TreeNode p = root;
+        TreeNode parent = root;
+        while (p.val != key) {
+            if (key > p.val) {
+                parent = p;
+                p = p.right;
+            }
+            else if (key < p.val) {
+                parent = p;
+                p = p.left;
+            }
+        }
+        // delete p
+        if (p.left == null && p.right == null) {
+            if (parent.val > p.val) parent.left = null;
+            else parent.right = null;
+        } else if (p.right == null) {
+            if (parent.val > p.val) parent.left = p.left;
+            else parent.right = p.left;
+        } else if (p.left == null) {
+            if (parent.val > p.val) parent.left = p.right;
+            else parent.right = p.right;
+        } else {
+            TreeNode t = p.right, tparent = null;
+            while (t.left != null) {
+                tparent = t;
+                t = t.left;
+            }
+            p.val = t.val;
+            if (tparent != null) tparent.left = t.right;
+            else p.right = t.right;
+        }
+        return root;
     }
 }
