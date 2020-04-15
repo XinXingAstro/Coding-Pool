@@ -7,42 +7,27 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+import java.util.*;
 class Solution {
-    public TreeNode deleteNode(TreeNode root, int key) {
-        if (root == null) return root;
-        // find Key node
-        TreeNode p = root;
-        TreeNode parent = root;
-        while (p.val != key) {
-            if (key > p.val) {
-                parent = p;
-                p = p.right;
-            }
-            else if (key < p.val) {
-                parent = p;
-                p = p.left;
-            }
+    public Map<Integer, Integer> map = new HashMap<>();
+    public int max = 0;
+    public int[] findFrequentTreeSum(TreeNode root) {
+        if (root == null) return new int[0];
+        List<Integer> list = new ArrayList<>();
+        for (Integer i : map.keySet()) {
+            if (map.get(i) == max) list.add(i);
         }
-        // delete p
-        if (p.left == null && p.right == null) {
-            if (parent.val > p.val) parent.left = null;
-            else parent.right = null;
-        } else if (p.right == null) {
-            if (parent.val > p.val) parent.left = p.left;
-            else parent.right = p.left;
-        } else if (p.left == null) {
-            if (parent.val > p.val) parent.left = p.right;
-            else parent.right = p.right;
-        } else {
-            TreeNode t = p.right, tparent = null;
-            while (t.left != null) {
-                tparent = t;
-                t = t.left;
-            }
-            p.val = t.val;
-            if (tparent != null) tparent.left = t.right;
-            else p.right = t.right;
-        }
-        return root;
+        int[] ans = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) ans[i] = list.get(i);
+        return ans;
+    }
+    public int postorder(TreeNode root) {
+        if (root == null) return 0;
+        int left = postorder(root.left);
+        int right = postorder(root.right);
+        int sum = left + right + root.val;
+        map.put(sum, map.getOrDefault(sum, 0) + 1);
+        max = Math.max(max, map.get(sum));
+        return sum;
     }
 }
