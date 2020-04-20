@@ -37,19 +37,14 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
-       /* TreeNode a = new TreeNode(5);
+        TreeNode a = new TreeNode(1);
         TreeNode b = new TreeNode(3);
-        TreeNode c = new TreeNode(6);
-        TreeNode d = new TreeNode(2);
-        TreeNode e = new TreeNode(4);
-        TreeNode f = new TreeNode(7);
+        TreeNode c = new TreeNode(2);
+        TreeNode d = new TreeNode(5);
+        TreeNode e = new TreeNode(3);
+        TreeNode f = new TreeNode(9);
         a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
-        new Solution().deleteNode(a, 3);*/
+        new Solution().widthOfBinaryTree(a);
 
-        TreeNode a = new TreeNode(5);
-        TreeNode b = new TreeNode(2);
-        TreeNode c = new TreeNode(-3);
-        a.right = b; b.left = c;
-        new Solution().findFrequentTreeSum(a);
     }
 }

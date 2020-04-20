@@ -1,0 +1,20 @@
+二叉树求有关不经过根节点的路径问题，都可以通过下面的模板得到
+Leetcode相关题目：
+687. Longest Univalue Path
+除了上面这个还有两道待补充
+一般这种路径问题都是使用后续遍历，遍历函数中都会定义两个变量left、right时间递归，然后根据题目条件对当前节点进行操作。
+```java
+class Solution {
+    public int solve(TreeNode root) {
+        postorder(root);
+        return ...;
+    }
+    public int postorder(TreeNode root) {
+        if (root == null) return 0;
+        int left = postorder(root.left);
+        int right = postorder(root.right);
+        // do some thing for root
+        return ...;
+    }
+}
+```
