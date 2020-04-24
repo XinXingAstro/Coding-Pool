@@ -37,14 +37,20 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
-        TreeNode a = new TreeNode(1);
-        TreeNode b = new TreeNode(3);
-        TreeNode c = new TreeNode(2);
-        TreeNode d = new TreeNode(5);
-        TreeNode e = new TreeNode(3);
-        TreeNode f = new TreeNode(9);
-        a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
-        new Solution().widthOfBinaryTree(a);
+        /*TreeNode a = new TreeNode(3);
+        TreeNode b = new TreeNode(5);
+        TreeNode c = new TreeNode(1);
+        TreeNode d = new TreeNode(6);
+        TreeNode e = new TreeNode(2);
+        TreeNode f = new TreeNode(0);
+        TreeNode g = new TreeNode(8);
+        TreeNode h = new TreeNode(7);
+        TreeNode i = new TreeNode(4);
+        a.left = b; a.right = c; b.left = d; b.right = e; c.left = f; c.right = g;
+        e.left = h; e.right = i;
+        new Solution().distanceK(a, b, 2);*/
+        int m = 5, n = 7;
+        System.out.println(new Solution().rangeBitwiseAnd(m, n));
 
     }
 }
