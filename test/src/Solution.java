@@ -1,19 +1,8 @@
 class Solution {
-    public int rangeBitwiseAnd(int m, int n) {
-        if (m == n) return m;
-        int ans = 0, bit = 1;
-        while (bit <= m) bit <<= 1;
-        while (m != 0 && n != 0) {
-            if (m >= (bit / 2) && n < bit) {
-                bit >>= 1;
-                ans |= bit;
-                m ^= bit;
-                n ^= bit;
-            } else {
-                bit >>= 1;
-                if (n >= bit) break;
-            }
+    public boolean isIsomorphic(String s, String t) {
+        for (int i = 0; i < t.length(); i++) {
+            s = s.replace(s.charAt(i), t.charAt(i));
         }
-        return ans;
+        return s.equals(t);
     }
 }

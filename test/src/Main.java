@@ -49,8 +49,14 @@ public class Main {
         a.left = b; a.right = c; b.left = d; b.right = e; c.left = f; c.right = g;
         e.left = h; e.right = i;
         new Solution().distanceK(a, b, 2);*/
-        int m = 5, n = 7;
-        System.out.println(new Solution().rangeBitwiseAnd(m, n));
+
+        /*char[][] c = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+        new Solution().solve(c);*/
+//        System.out.println(4.0/333.0);
+        String s = "egg";
+        String t = "add";
+        new Solution().isIsomorphic(s, t);
 
     }
+
 }
