@@ -37,14 +37,17 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
-        TreeNode a = new TreeNode(1);
+        /*TreeNode a = new TreeNode(1);
         TreeNode b = new TreeNode(3);
         TreeNode c = new TreeNode(2);
         TreeNode d = new TreeNode(5);
         TreeNode e = new TreeNode(3);
         TreeNode f = new TreeNode(9);
         a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
-        new Solution().widthOfBinaryTree(a);
+        new Solution().widthOfBinaryTree(a);*/
+        int[] nums = {1,1,1};
+        int k = 2;
+        System.out.println(new Solution().subarraySum(nums, k));
 
     }
 }
