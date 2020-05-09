@@ -45,9 +45,29 @@ public class Main {
         TreeNode f = new TreeNode(9);
         a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
         new Solution().widthOfBinaryTree(a);*/
-        int[] nums = {1,1,1};
-        int k = 2;
-        System.out.println(new Solution().subarraySum(nums, k));
+        // int[] nums = {1,1,1};
+        // int k = 2;
+        // System.out.println(new Solution().subarraySum(nums, k));
+        /*TreeNode a = new TreeNode(3);
+        TreeNode b = new TreeNode(5);
+        TreeNode c = new TreeNode(1);
+        TreeNode d = new TreeNode(6);
+        TreeNode e = new TreeNode(2);
+        TreeNode f = new TreeNode(0);
+        TreeNode g = new TreeNode(8);
+        TreeNode h = new TreeNode(7);
+        TreeNode i = new TreeNode(4);
+        a.left = b; a.right = c; b.left = d; b.right = e; c.left = f; c.right = g;
+        e.left = h; e.right = i;
+        new Solution().distanceK(a, b, 2);*/
+
+        /*char[][] c = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+        new Solution().solve(c);*/
+//        System.out.println(4.0/333.0);
+        // String s = "egg";
+        // String t = "add";
+        // new Solution().isIsomorphic(s, t);
 
     }
+
 }
