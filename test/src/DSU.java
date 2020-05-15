@@ -19,7 +19,7 @@ public class DSU {
         if (rank[xr] < rank[yr]) par[xr] = yr;
         else {
             par[yr] = xr;
-            if (rank[x] == rank[y]) rank[x]++;
+            if (rank[xr] == rank[yr]) rank[xr]++;
         }
     }
 }
