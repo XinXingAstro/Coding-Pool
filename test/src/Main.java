@@ -53,9 +53,8 @@ public class Main {
         /*char[][] c = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         new Solution().solve(c);*/
 //        System.out.println(4.0/333.0);
-        String s = "egg";
-        String t = "add";
-        new Solution().isIsomorphic(s, t);
+        in[] n = {1,2,3,4,5,6};
+
 
     }
 
