@@ -37,6 +37,17 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
+        /*TreeNode a = new TreeNode(1);
+        TreeNode b = new TreeNode(3);
+        TreeNode c = new TreeNode(2);
+        TreeNode d = new TreeNode(5);
+        TreeNode e = new TreeNode(3);
+        TreeNode f = new TreeNode(9);
+        a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
+        new Solution().widthOfBinaryTree(a);*/
+        // int[] nums = {1,1,1};
+        // int k = 2;
+        // System.out.println(new Solution().subarraySum(nums, k));
         /*TreeNode a = new TreeNode(3);
         TreeNode b = new TreeNode(5);
         TreeNode c = new TreeNode(1);
@@ -53,9 +64,13 @@ public class Main {
         /*char[][] c = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         new Solution().solve(c);*/
 //        System.out.println(4.0/333.0);
-        in[] n = {1,2,3,4,5,6};
 
-
+        // String s = "egg";
+        // String t = "add";
+        // new Solution().isIsomorphic(s, t);
+        char[][] b = {{'a','b','c'},{'a','e','d'},{'a','f','g'}};
+        String[] w = {"eaabcdgfa"};
+        new Solution().findWords(b, w);
     }
 
 }
