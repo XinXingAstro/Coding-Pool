@@ -1,12 +1,12 @@
-import java.util.Stack;
+import java.util.*;
 class MinStack {
     private int min;
-    private Stack<Integer> stack;
-    private Stack<Integer> minStack;
+    private Deque<Integer> stack;
+    private Deque<Integer> minStack;
     /** initialize your data structure here. */
     public MinStack() {
-        stack = new Stack<>();
-        minStack = new Stack<>();
+        stack = new LinkedList<>();
+        minStack = new LinkedList<>();
         min = Integer.MAX_VALUE;
     }
 
