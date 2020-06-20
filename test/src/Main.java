@@ -64,10 +64,14 @@ public class Main {
         /*char[][] c = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         new Solution().solve(c);*/
 //        System.out.println(4.0/333.0);
+
         // String s = "egg";
         // String t = "add";
         // new Solution().isIsomorphic(s, t);
-        new Solution().isPerfectSquare(808201);
+
+        char[][] b = {{'a','b','c'},{'a','e','d'},{'a','f','g'}};
+        String[] w = {"eaabcdgfa"};
+        new Solution().findWords(b, w);
     }
 
 }
