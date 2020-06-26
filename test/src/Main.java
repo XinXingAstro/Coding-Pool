@@ -69,9 +69,6 @@ public class Main {
         // String t = "add";
         // new Solution().isIsomorphic(s, t);
 
-        char[][] b = {{'a','b','c'},{'a','e','d'},{'a','f','g'}};
-        String[] w = {"eaabcdgfa"};
-        new Solution().findWords(b, w);
     }
 
 }
