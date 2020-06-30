@@ -1,20 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
-    public boolean isPerfectSquare(int num) {
-        if (num <= 1) {
-            return true;
+    public List<Integer> findSubstring(final String s, final String[] words) {
+        int wlen = words[0].length;
+        List<String> list = new ArrayList<>();
+        boolean[] used = new boolean[words.length];
+        for (String w : words) {
+            list.add(w);
         }
-        int lo = 0, hi = num/2;
-        while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            double sqr = (double) mid * (double) mid;
-            if (sqr == (double) num) {
-                return true;
-            } else if (sqr < (double) num) {
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
-            }
+        for (int i = 0; i < s.length(); i++) {
+            String temp = s.substring(i, i + wlen);
         }
-        return false;
     }
 }
