@@ -14,7 +14,8 @@ public class DSU {
     }
 
     public void union(int x, int y) {
-        int xr = find(x), yr = find(y);
+        int xr = find(x);
+        int yr = find(y);
         if (xr == yr) return;
         if (rank[xr] < rank[yr]) par[xr] = yr;
         else {
