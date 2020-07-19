@@ -6,10 +6,11 @@ public class Node {
 
     public Node() {}
 
-    public Node(int _val) {
+    public Node(final int _val) {
         val = _val;
     }
-    public Node(int _val, Node _left, Node _right, Node _next) {
+
+    public Node(final int _val, final Node _left, final Node _right, final Node _next) {
         val = _val;
         left = _left;
         right = _right;
