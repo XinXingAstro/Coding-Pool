@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        new MinStack();
+        int[] a = {3,9,20,15,7};
+        int[] b = {9,3,15,20,7};
+        new Solution().buildTree(a, b);
 /*        ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);
