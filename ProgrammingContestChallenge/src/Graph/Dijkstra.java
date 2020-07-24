@@ -5,7 +5,6 @@ import java.util.Map;
  * 单元最短路径算法：Dijkstra算法 
  */
 public class Dijkstra {
-    Map<K,V>.Entry
     private int MAX_V;                            // 最大结点数量
     private int[][] cost = new int[MAX_V][MAX_V]; // cost[u][v] 表示边 e =（u，v) 的权值（不存在这条边时设为INF）
     private int[] d = new int[MAX_V];             // 从顶点s出发的最短路径
