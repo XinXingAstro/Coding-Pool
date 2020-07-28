@@ -1,0 +1,16 @@
+Graph:
+- Deep-first search: 图的着色问题
+- Breadth-first search
+- Kahn's algorithm: DAG的Topological排序。
+- Bellman-Ford algorithm: 单源最短路径问题，检测图中负圈
+- Dijkstra algorithm: 没有负边图的单源最短路径问题
+- Floyd-Warshall algorithm: 任意两点见的最短路径问题
+- Prim algorithm: 最小生成树问题
+- Kruskal algorithm: 最小生成树问题
+
+String
+- Manacher algorithm: 线性时间内找到字符串中最长回文子串
+- Rabin-Karp algorithm: 字符串匹配问题
+
+Math
+- 
