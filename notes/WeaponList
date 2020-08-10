@@ -1,6 +1,6 @@
 Graph:
-- Deep-first search: 图的着色问题
-- Breadth-first search
+- Deep-first search: 图的着色问题，连通性，单点路径
+- Breadth-first search: 单点最短路径（最短指含边数最少）
 - Kahn's algorithm: DAG的Topological排序。
 - Bellman-Ford algorithm: 单源最短路径问题，检测图中负圈
 - Dijkstra algorithm: 没有负边图的单源最短路径问题
