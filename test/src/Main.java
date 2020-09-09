@@ -2,9 +2,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
-
-
 /*        ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);
@@ -42,14 +39,20 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
-        /*TreeNode a = new TreeNode(1);
-        TreeNode b = new TreeNode(3);
-        TreeNode c = new TreeNode(2);
-        TreeNode d = new TreeNode(5);
-        TreeNode e = new TreeNode(3);
-        TreeNode f = new TreeNode(9);
-        a.left = b; a.right = c; b.left = d; b.right = e; c.right = f;
-        new Solution().widthOfBinaryTree(a);*/
+        TreeNode a = new TreeNode(1);
+        TreeNode b = new TreeNode(2);
+        TreeNode c = new TreeNode(3);
+        TreeNode d = new TreeNode(4);
+        TreeNode e = new TreeNode(5);
+        TreeNode f = new TreeNode(6);
+        a.left = b; a.right = c; b.left = d; b.right = e; c.left = f;
+        Test t = new Test();
+        t.dfs(a);
+        for (int i : t.preOrder) System.out.print(i + " ");
+        System.out.println();
+        for (int i : t.postOrder) System.out.print(i + " ");
+        System.out.println();
+        for (int i : t.postReverse) System.out.print(i + " ");
         // int[] nums = {1,1,1};
         // int k = 2;
         // System.out.println(new Solution().subarraySum(nums, k));
@@ -75,5 +78,4 @@ public class Main {
         // new Solution().isIsomorphic(s, t);
 
     }
-
 }
