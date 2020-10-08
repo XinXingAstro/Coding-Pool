@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
+        int[][] edges = {{3,1},{2,1},{4,2},{1,4}};
+        new Solution().findRedundantDirectedConnection(edges);
 //        int[] a = {3,9,20,15,7};
 //        int[] b = {9,3,15,20,7};
 //        new Solution().buildTree(a, b);
@@ -40,21 +42,21 @@ public class Main {
         System.out.println(new Solution().numDecodings(s));*/
 //        System.out.println(new Test().test("123"));
 
-        TreeNode a = new TreeNode(1);
-        TreeNode b = new TreeNode(2);
-        TreeNode c = new TreeNode(3);
-        TreeNode d = new TreeNode(4);
-        TreeNode e = new TreeNode(5);
-        TreeNode f = new TreeNode(6);
-        a.left = b; a.right = c; b.left = d; b.right = e; c.left = f;
-        Test t = new Test();
-        t.dfs(a);
-        for (int i : t.preOrder) System.out.print(i + " ");
-        System.out.println();
-        for (int i : t.postOrder) System.out.print(i + " ");
-        System.out.println();
-        for (int i : t.postReverse) System.out.print(i + " ");
-        // int[] nums = {1,1,1};
+//        TreeNode a = new TreeNode(1);
+//        TreeNode b = new TreeNode(2);
+//        TreeNode c = new TreeNode(3);
+//        TreeNode d = new TreeNode(4);
+//        TreeNode e = new TreeNode(5);
+//        TreeNode f = new TreeNode(6);
+//        a.left = b; a.right = c; b.left = d; b.right = e; c.left = f;
+//        Test t = new Test();
+//        t.dfs(a);
+//        for (int i : t.preOrder) System.out.print(i + " ");
+//        System.out.println();
+//        for (int i : t.postOrder) System.out.print(i + " ");
+//        System.out.println();
+//        for (int i : t.postReverse) System.out.print(i + " ");
+//        // int[] nums = {1,1,1};
         // int k = 2;
         // System.out.println(new Solution().subarraySum(nums, k));
         /*TreeNode a = new TreeNode(3);
