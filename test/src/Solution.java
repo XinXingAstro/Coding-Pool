@@ -1,41 +1,67 @@
+
+
 class Solution {
-    private class UF {
-        private int[] par;
-        private int[] rank;
-        public UF(int size) {
-            par = new int[size];
-            rank = new int[size];
-            for (int i = 0; i < size; i++) par[i] = i;
-        }
-        public int find(int x) {
-            if (par[x] != x) par[x] = find(par[x]);
-            return par[x];
+    private class Edge {
+        private String from;
+        private String to;
+        private double weight;
+        public Edge(String f, String t, double w) {
+            from = f;
+            to = t;
+            weight = w;
         }
     }
-    public int[] findRedundantDirectedConnection(int[][] edges) {
-        UF uf = new UF(edges.length + 1);
-        int[] ans1 = null;
-        int[] ans2 = null;
-        for (int[] e : edges) {
-            if (uf.par[e[1]] != e[1]) {
-                ans1 = new int[]{uf.par[e[1]], e[1]};
-                ans2 = new int[]{e[0], e[1]};
-                e[1] = -1;//标记节点为-1因为在后面环检测时会出现环外祖先
-                System.out.println(ans1[0] + " " + ans1[1] + " " + ans2[0] + " " + ans2[1]);
-                break;
+    private Map<String, List<Edge>> G;
+    private double[] ans;
+    private double res;
+    private Set<String> marked;
+
+    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
+        G = new HashMap<>();
+        for (int i = 0; i < equations.size(); i++) {
+            List<String> eq = equations.get(i);
+            String cur = eq.get(0);
+            String next = eq.get(1);
+            if (!G.containsKey(cur)) {
+                G.put(cur, new ArrayList<>());
             }
-            uf.par[e[1]] = uf.find(e[0]);
-        }
-        uf = new UF(edges.length + 1);
-        for (int[] e : edges) {
-            if (e[1] == -1) continue;
-            if (uf.find(e[0]) == e[1]) {
-                System.out.println("has cycle");
-                return ans1 == null ? e : ans1;
+            if (!G.containsKey(next)) {
+                G.put(next, new ArrayList<>());
             }
-            uf.par[e[1]] = e[0];
-            // System.out.println(uf.par[e[1]]);
+            Edge e1 = new Edge(cur, next, values[i]);
+            G.get(cur).add(e1);
+            Edge e2 = new Edge(next, cur, 1/values[i]);
+            G.get(next).add(e2);
         }
-        return ans2;
+        ans = new double[queries.size()];
+        marked = new HashSet<>();
+        for (int i = 0; i < queries.size(); i++) {
+            List<String> q = queries.get(i);
+            String a = q.get(0), b = q.get(1);
+            if (!G.containsKey(a) || !G.containsKey(b)) {
+                ans[i] = -1.0;
+            } else {
+                marked.clear();
+                dfs(a, b, 1.0);
+                ans[i] = res;
+            }
+        }
+        return ans;
+    }
+
+    private void dfs(String cur, String end, double div) {
+        System.out.println(cur + " " + div);
+        if (cur.equals(end)) {
+            res = div;
+            return;
+        }
+        marked.add(cur);
+        for (Edge e : G.get(cur)) {
+            if (!marked.contains(e.to)) {
+                System.out.println(e.from + "->" + e.to);
+                dfs(e.to, end, div * e.weight);
+            }
+        }
     }
 }
+
