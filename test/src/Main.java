@@ -3,7 +3,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         int[][] edges = {{3,1},{2,1},{4,2},{1,4}};
-        new Solution().findRedundantDirectedConnection(edges);
 //        int[] a = {3,9,20,15,7};
 //        int[] b = {9,3,15,20,7};
 //        new Solution().buildTree(a, b);
