@@ -1,4 +1,6 @@
-/* 
+package Graph;
+
+/*
  * 求任意两点间的最短距离: Floyd-Warshall算法
  */
 public class FloydWarshall {

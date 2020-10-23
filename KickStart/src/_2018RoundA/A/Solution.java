@@ -1,3 +1,5 @@
+package _2018RoundA.A;
+
 import java.util.*;
 import java.io.*;
 public class Solution {

@@ -1,7 +1,11 @@
+package _2018RoundA.A;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 // 只能解决Small Test case
-import java.util.*;
-import java.io.*;
-public class A.Solution {
+public class Solution_1 {
     public static int minDis(int N) {
         int dis = 0;
         for (int i = 0; i <= N; i++) {
