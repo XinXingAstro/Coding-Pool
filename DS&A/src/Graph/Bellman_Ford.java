@@ -33,8 +33,7 @@ public class Bellman_Ford {
         d[s] = 0;
         while (true) {
             boolean update = false;
-            for (int i = 0; i < E; i++) {
-                Edge e = es[i];
+            for (Edge e : es) {
                 if (d[e.from] != INF && d[e.to] > d[e.from] + e.cost) {
                     d[e.to] = d[e.from] + e.cost;
                     update = true;
@@ -50,8 +49,7 @@ public class Bellman_Ford {
         boolean update = false;
         do {
             update = false;
-            for (int i = 0; i < E; i++) {
-                Edge e = es[i];
+            for (Edge e : es) {
                 if (d[e.from] != INF && d[e.to] > d[e.from] + e.cost) {
                     d[e.to] = d[e.from] + e.cost;
                     update = true;
