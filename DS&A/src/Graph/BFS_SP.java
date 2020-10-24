@@ -4,32 +4,27 @@ import java.util.*;
 
 /*
 * 解决：单源最短路径问题
-* Shortest Path Faster Algorithm (SPFA) 算法
-* 时间复杂度：O(kE)(k为所有顶点进队得平均次数，可以证明k一般<=2, E为图的边数)
+* BFS（宽度优先遍历）算法（使用队列）
+* 时间复杂度：O(|V|+|E|)(邻接表存储)
+*           O(|V|^2)(邻接矩阵存储)
 * */
-public class SPFA {
+public class BFS_SP {
     private final int INF = 1000000;
     private List<Edge>[] G;
     private int[] d;
-    private int V;
 
-    private void spfa(int s) {
+    private void bfs_sp(int s) {
         Queue<Integer> queue = new ArrayDeque<>();
-        boolean[] inq = new boolean[V];
         Arrays.fill(d, INF);
         d[s] = 0;
         queue.offer(s);
 
         while (!queue.isEmpty()) {
             int v = queue.poll();
-            inq[v] = false;
             for (Edge e : G[v]) {
                 if (d[e.to] > d[v] + e.cost) {
                     d[e.to] = d[v] + e.cost;
-                    if (!inq[e.to]) {
-                        queue.offer(e.to);
-                        inq[e.to] = true;
-                    }
+                    queue.offer(e.to);
                 }
             }
         }

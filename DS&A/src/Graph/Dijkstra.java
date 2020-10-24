@@ -2,36 +2,38 @@ package Graph;
 
 import java.util.*;
 
-/* 
+/*
  * 解决：单源最短路径问题
- * Dijkstra算法
- * 时间复杂度：O(|V|^2)
+ * Dijkstra算法(使用优先队列)
+ * 时间复杂度：O((|E|+|V|)log|V|)
  * 要求：图中没有负边
  */
 public class Dijkstra {
     private final int INF = 1000000;
-    private int V;          // 顶点数
-    private int[][] cost;   // cost[u][v] 表示边 e =（u，v) 的权值（不存在这条边时设为INF）
-    private int[] d;        // 从顶点s出发的最短路径
-    private boolean[] used; // 已经使用过的顶点
+    private List<Edge>[] G; // 邻接表存储图
+    private int[] d;
 
-    // 求从顶点s出发到各个顶点的最短距离
     private void dijkstra(int s) {
+        // 堆中存放那int[], o[0]表示最短距离，o[1]表示结点标号，堆按照o[0]从小到大的顺序取出值
+        PriorityQueue<int[]> queue = new PriorityQueue(new Comparator<int[]>(){
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0] - o2[0];
+            }
+        });
         Arrays.fill(d, INF);
         d[s] = 0;
+        queue.offer(new int[]{0, s});
 
-        while (true) {
-            int v = -1;
-            // 从尚未使用过的顶点中选择一个距离最小的顶点
-            for (int u = 0; u < V; u++) {
-                if (!used[u] && (v == -1 || d[u] < d[v])) v = u;
-            }
-
-            if (v == -1) break;
-            used[v] = true;
-
-            for (int u = 0; u < V; u++) {
-                d[u] = Math.min(d[u], d[v] + cost[v][u]);
+        while (!queue.isEmpty()) {
+            int[] cur = queue.poll();
+            int v = cur[1];
+            if (d[v] < cur[0]) continue; //因为cur[0]里面记录的可能不是最新的d[v]
+            for (Edge e : G[v]) {
+                if (d[e.to] > d[v] + e.cost) {
+                    d[e.to] = d[v] + e.cost;
+                    queue.offer(new int[]{d[e.to], e.to});
+                }
             }
         }
     }

@@ -9,20 +9,6 @@ import java.util.Arrays;
  */
 public class Bellman_Ford {
     private final int INF = 1000000;
-
-    private class Edge {
-        private int from;
-        private int to;
-        private int cost;
-        public Edge(int f, int t, int c) {
-            from = f;
-            to = t;
-            cost = t;
-        }
-    }
-
-    private int MAX_E; // 最大的边数
-    private int MAX_V; // 最大的顶点数
     private Edge[] es; // 边
     private int[] d;   // 最短距离
     private int V, E;  // V是顶点数，E是边数
