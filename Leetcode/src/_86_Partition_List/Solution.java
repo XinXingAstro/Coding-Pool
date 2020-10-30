@@ -1,3 +1,5 @@
+import common.ListNode;
+
 public class Solution {
     /**
      * Partition list node.

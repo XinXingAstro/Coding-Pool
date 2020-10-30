@@ -1,3 +1,5 @@
+import common.ListNode;
+
 public class Solution {
     /**
      * Reverse between list node.

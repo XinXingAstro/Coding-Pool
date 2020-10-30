@@ -1,3 +1,7 @@
+package _1_Two_Sum;
+
+import java.util.*;
+
 class Solution {
     //Brute-force search
     //Time complexity: O(n^2). n <= 1000

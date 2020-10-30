@@ -1,3 +1,5 @@
+import common.ListNode;
+
 public class Solution {
     /**
      * Delete duplicates list node.

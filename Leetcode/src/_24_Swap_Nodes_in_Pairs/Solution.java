@@ -1,9 +1,11 @@
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class common.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ *     common.ListNode next;
+ *     common.ListNode(int x) { val = x; }
  * }
  */
 class Solution {
