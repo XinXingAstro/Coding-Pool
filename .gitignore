@@ -5,18 +5,13 @@
 # java compile files
 *.class
 
-# test module files
-test/output/*
-
-# alogrithm_4 module files
-/alogrithm_4/output/*
-
 # vscode configs
 .vscode/*
+
+# MacOS 文件
+.DS_Store
 
 # 解决文件无法忽略（一般是缓存造成的，所以要清缓存）
 # git rm -r --cached .
 # git add .
 
-# MacOS 文件
-.DS_Store
