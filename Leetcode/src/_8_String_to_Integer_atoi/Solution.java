@@ -1,3 +1,5 @@
+package _8_String_to_Integer_atoi;
+
 class Solution {
     //Time complexity: O(n)
     //Space complexity: O(1)

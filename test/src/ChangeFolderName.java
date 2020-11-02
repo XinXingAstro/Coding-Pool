@@ -1,15 +1,14 @@
 import java.io.File;
 
+// 修改文件夹名、文件名及路径
 public class ChangeFolderName {
     public static void main(String[] args) {
-        String path = "D:\\Repositories\\Coding-Pool\\Leetcode";
+        String path = "D:\\Repositories\\Coding-Pool\\Leetcode\\src";
         File root = new File(path);
         File[] listFiles = root.listFiles();
-        String newPath = path + "\\src";
-        File src = new File(newPath);
-        src.mkdir();
         for (File f : listFiles) {
-            f.renameTo(new File(path + "\\src\\"+ f.getName()));
+            System.out.println(f.getName());
+//            f.renameTo(new File(path + "\\src\\"+ f.getName()));
         }
     }
 }

@@ -1,3 +1,7 @@
+package _3_Longest_Substring_Without_Repeating_Characters;
+
+import java.util.*;
+
 class Solution {
 	//Brute Force Search
     //判断所有子串中是否存在重复字符
@@ -67,7 +71,7 @@ class Solution {
     //use HashMap
     //Time complexity: O(n)
     //Space complexity: O(min(m, n))
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring1(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int ans = 0, n = s.length();
         for (int i = 0, j = 0; j < n; j++) {
